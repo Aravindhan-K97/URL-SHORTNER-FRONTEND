@@ -10,7 +10,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/auth/register', formData);
+      await axios.post('https://url-shortner-backend-3kqe.onrender.com/auth/register', formData);
       setMessage('User registered. Please check your email to activate your account.');
     } catch (err) {
       setError(err.response.data.message);
