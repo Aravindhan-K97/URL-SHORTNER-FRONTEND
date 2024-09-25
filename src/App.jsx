@@ -12,15 +12,16 @@ import UrlList from './components/UrlList';
 
 function App() {
   return (
+    
     <Router>
       <div className="container mt-5">
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/activate/:activationToken" element={<ActivateAccount />} />
+          <Route path="/activate/:token" element={<ActivateAccount />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/url-stats" element={<UrlStats />} />
           <Route path="/url-list" element={<UrlList />} />
